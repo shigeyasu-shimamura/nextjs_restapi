@@ -1,7 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
-
 from rest_framework.permissions import AllowAny
 from rest_framework import generics
 from rest_framework import viewsets
@@ -19,6 +15,7 @@ class PostListView(generics.ListAPIView):
     serializer_class = PostSerializer
     permission_classes = (AllowAny,)
 
+
 class PostRetrieveView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -30,15 +27,16 @@ class TaskListView(generics.ListAPIView):
     serializer_class = TaskSerializer
     permission_classes = (AllowAny,)
 
+
 class TaskRetrieveView(generics.RetrieveAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = (AllowAny,)
 
 
-
-# ModelViewSetを利用→CRUDを利用できる
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+
 
