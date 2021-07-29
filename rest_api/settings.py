@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['nextjs-api-kiso.herokuapp.com' '127.0.0.1:8000/']
+ALLOWED_HOSTS = ['nextjs-api-kiso.herokuapp.com']
 
 
 # Application definition
